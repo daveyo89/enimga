@@ -2,7 +2,6 @@ import os
 import re
 import sys
 import tkinter as tk
-from validate_email import validate_email
 from pathlib import Path
 from shutil import copy
 from tkinter import messagebox, ttk
@@ -10,10 +9,11 @@ from tkinter.filedialog import askopenfilename
 
 from bs4 import BeautifulSoup
 from epub_conversion.utils import open_book, convert_epub_to_lines
+from validate_email import validate_email
 
+from src.Config import ConfigHandler
 from src.Login import Login
 from src.Mailer import Mailer
-from src.Config import ConfigHandler
 
 
 class Window:
