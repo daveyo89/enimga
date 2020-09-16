@@ -220,7 +220,6 @@ class Window:
         if self.input:
             for word in self.input:
                 try:
-
                     if self.checkCmd.get() == 1:
                         self.message.append(str(self.word_list[int(word)]))
                     else:

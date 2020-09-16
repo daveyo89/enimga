@@ -13,11 +13,12 @@ class ConfigHandler:
     def check_existing_config(self):
         os.makedirs(f"{self.project_path}/config", exist_ok=True)
         os.chdir(f"{self.project_path}/config")
-        files = glob.glob("*.yaml")
+        files = glob.glob("*@*.yaml")
 
         if not files:
             return self.create_credentials()
         else:
+            # Todo create/manage more accounts possible.
             return self.read_yml(files[0])
 
     def generate_key(self):
